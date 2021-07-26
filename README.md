@@ -9,6 +9,10 @@ This image is configured for use External DB ( VM, RDS or Google SQL), the PHPIp
     * Connect in your cluster.
     * Run the command kubectl apply -f deployment.yml.
     
+### For Configure:
+
+    * Access the http://your-service-ip
+    
     
  For the HTTPS I used HAProxy.   
     
