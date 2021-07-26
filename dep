@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpipam
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phpipam
+  template:
+    metadata:
+      labels:
+        app: phpipam
+    spec:
+      containers:
+      - name: phpipam
+        image: feiras/phpipam
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      hostAliases:
+      - ip: "10.10.10.10" #use the IP Database
+        hostnames:
+        - "notchange"  #not change
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpipam-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: phpipam
+  type: LoadBalancer   
