@@ -5,7 +5,7 @@ This image is configured for use External DB ( VM, RDS or Google SQL), the PHPIp
 
 
 ### For use:
-    * Change the deployment.yml with your db IP
+    * Change the deployment.yml with your Database IP.
     * Connect in your cluster and run command bellow.
 
     kubectl apply -f deployment.yml
