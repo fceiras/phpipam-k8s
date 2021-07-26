@@ -11,5 +11,8 @@ This image is configured for use External DB ( VM, RDS or Google SQL), the PHPIp
     kubectl apply -f deployment.yml
     
     
+ For the HTTPS, I used HAProxy.   
+    
+    
 
 
