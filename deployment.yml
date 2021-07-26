@@ -18,11 +18,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-      hostAliases:
-      - ip: "10.10.10.10" #use the IP Database
-        hostnames:
-        - "notchange"  #not change
----
+---        
 apiVersion: v1
 kind: Service
 metadata:
